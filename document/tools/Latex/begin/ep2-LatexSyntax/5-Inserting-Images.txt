@@ -1,0 +1,8 @@
+\usepackage{graphicx} % Add in the preamble
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image_filename.jpg}
+    \caption{An example image}
+    \label{fig:example}
+\end{figure}

@@ -1,0 +1,27 @@
+\documentclass{article} % Document type
+
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage{amsmath, amssymb} % Math packages
+
+\title{Document Title}
+\author{Your Name}
+\date{\today} % or specify a date: \date{May 18, 2025}
+
+\begin{document}
+
+\maketitle % Displays the title, author, and date
+
+\section{Introduction}
+This is the introduction to your LaTeX document.
+
+\section{Math Example}
+Here’s an equation:
+\[
+    E = mc^2
+\]
+
+\subsection{Inline Math}
+You can also write inline math like this: $a^2 + b^2 = c^2$.
+
+\end{document}
+

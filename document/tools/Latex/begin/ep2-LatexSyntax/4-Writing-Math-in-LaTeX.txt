@@ -1,0 +1,17 @@
+| Expression    | LaTeX Code                   |
+| ------------- | ---------------------------- |
+| Superscript   | `x^2`                        |
+| Subscript     | `a_1`                        |
+| Fraction      | `\frac{a}{b}`                |
+| Square root   | `\sqrt{x}`                   |
+| Integral      | `\int_a^b f(x)\,dx`          |
+| Summation     | `\sum_{i=1}^n i^2`           |
+| Greek letters | `\alpha, \beta, \gamma, \pi` |
+
+Example (matrix):
+\[
+\begin{bmatrix}
+  1 & 2 \\
+  3 & 4
+\end{bmatrix}
+\]

@@ -1,0 +1,13 @@
+Unordered (bullet) list:
+
+\begin{itemize}
+  \item First item
+  \item Second item
+\end{itemize}
+
+Ordered (numbered) list:
+
+\begin{enumerate}
+  \item Step one
+  \item Step two
+\end{enumerate}

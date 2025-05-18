@@ -1,0 +1,9 @@
+
+| Purpose       | Syntax                | Example               |                    |                            |
+| ------------- | --------------------- | --------------------- | ------------------ | -------------------------- |
+| **Bold text** | `\textbf{...}`        | `\textbf{Important}`  |                    |                            |
+| *Italic text* | `\textit{...}`        | `\textit{Emphasized}` |                    |                            |
+| Inline code   | \`\verb               | code                  | `or`\texttt{...}\` | `\texttt{printf("Hello")}` |
+| Inline math   | `$...$`               | `$x^2 + y^2$`         |                    |                            |
+| Display math  | `\[ ... \]`           | `\[\frac{a}{b}\]`     |                    |                            |
+| Comments      | `% This is a comment` |                       |                    |                            |
