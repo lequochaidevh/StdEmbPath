@@ -1,6 +1,19 @@
 #ifndef MATRIX_CALC_BASE_C_H
 #define MATRIX_CALC_BASE_C_H
-//#define MATRIX_CALC_DEBUG
+#define MATRIX_CALC_DEBUG
+
+#define CHECK_RELATIVE_DIRECTION(vecA, vecB) check_relative_direction(vecA, vecB, #vecA, #vecB)
+
+typedef enum {
+    eMT_D_LEFT,
+    eMT_D_RIGHT,
+    eMT_D_COLLINEAR
+} eDir3s;
+
+typedef struct {
+    float x, y;
+} Vec2;
+
 typedef struct {
     float x, y, z;
 } Vec3;
@@ -8,6 +21,40 @@ typedef struct {
 typedef struct {
     float m[4][4];
 } Mat4;
+
+typedef struct viewVec2 {
+	float psi, phi;
+} viewVec2;
+/******************************_Vec2_******************************/
+// Dot product Vec2
+float vec2_dot(Vec2 a, Vec2 b);
+
+// Cross product Vec2
+float vec2_cross(Vec2 a, Vec2 b);
+
+float vec2_length(Vec2 v);
+
+// Add 2 Vec2
+Vec2 vec2_add(Vec2 a, Vec2 b);
+
+// Sub Vec2
+Vec2 vec2_sub(Vec2 a, Vec2 b);
+
+// Scale Vec2
+Vec2 vec2_mul_scalar(float s, Vec2 v);
+
+// Normalize Vec2
+Vec2 vec2_normalize(Vec2 v);
+
+// Point in 3D to 2D in screen.
+Vec2 project_to_screen(Vec3 pointNDC, int screenWidth, int screenHeight);
+
+// TODO: init directions
+Vec2 vec2_direction(Vec2 from, Vec2 to);
+
+// Check relative direction of vecB with vecA
+eDir3s check_relative_direction(Vec2 a, Vec2 b, const char* nameA, const char* nameB);
+/******************************_Vec2_******************************/
 
 // Add vector
 Vec3 vec3_add(Vec3 a, Vec3 b);
