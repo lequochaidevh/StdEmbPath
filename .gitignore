@@ -1,4 +1,4 @@
 AI_tutorial/Machine_learning
 AI_tutorial/*.whl
 AI_tutorial/.*/
-AI_tutorial/AI_Stick/.*/
+AI_tutorial/AI_Stick/.*
