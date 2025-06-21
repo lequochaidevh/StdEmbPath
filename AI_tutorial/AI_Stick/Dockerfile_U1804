@@ -1,0 +1,36 @@
+# Dùng base image là Ubuntu 18.04
+FROM ubuntu:18.04
+
+# Cập nhật và cài đặt các package cần thiết
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    build-essential \
+    wget \
+    curl \
+    git \
+    python3.6 \
+    python3.6-dev \
+    python3-pip \
+    python3-setuptools \
+    sudo
+
+#    && rm -rf /var/lib/apt/lists/*
+
+# Cài đặt pip cho python3.6 (nếu chưa có)
+RUN python3.6 -m pip install --upgrade pip
+
+# Đặt python3.6 làm python mặc định (tuỳ chọn)
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+
+# Kiểm tra version Python
+RUN python3 --version
+
+#RUN useradd -m -d /home/dev_ai -s /bin/bash dev_ai \
+#    && echo "dev_ai ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+#RUN apt-get install -y  python3-opencv \ 
+#    pip3 install --user tensorflow==1.13.1 \
+#    pip3 install --user rknn_toolkit-1.2.1-cp36-cp36m-linux_x86_64.whl \
+
+# Chỉ định command mặc định khi chạy container
+CMD ["python3"]
