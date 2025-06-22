@@ -1,10 +1,11 @@
+//build method 1: gcc exam_cubeRotateASCII.c ../matrixCalcBase.c -o exam -lm -g
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 #include <unistd.h>
 
-#include "matrixCalcBase.h"
+#include "../matrixCalcBase.h"
 
 #define WIDTH 80
 #define HEIGHT 40
@@ -167,7 +168,7 @@ int test()
     printf("\x1b[2J");   // Clear terminal
     printf("\x1b[?25l"); // Hiden cursor
     int break_time = 0;
-    while (break_time < 30)
+    while (break_time < 90)
     {
         clearScreen();
         Vec3 projected[8];

@@ -1,3 +1,4 @@
+//build method 1: gcc exam_CheckLeftRight.c ../matrixCalcBase.c -o exam -lm -g
 /* --- Check Vec2 lib --- 
  * Author: Le Quoc Hai __devh__
  * Edit: Jun 1 2025
